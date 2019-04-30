@@ -37,6 +37,12 @@ pipeline {
                   echo 'mvn Deliver' 
               //  sh './jenkins/scripts/deliver.sh'
             }
+            post {
+                always {
+                    archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
+                    junit 'build/reports/**/*.xml'
+        }
+            }
         }
     }
 }
