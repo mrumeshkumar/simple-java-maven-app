@@ -23,12 +23,12 @@ pipeline {
         stage('Test') {
             steps {
                  echo 'mvn test' 
-              //  sh 'mvn test'
+                sh 'mvn test'
             }
             post {
                 always {
                       echo 'mvn test Post' 
-                 //   junit 'target/surefire-reports/*.xml'
+                    junit 'target/surefire-reports/*.xml'
                 }
             }
         }
