@@ -4,6 +4,9 @@ pipeline {
         maven 'Maven 3.6.0' 
         jdk 'jdk8' 
     }
+    options {
+        skipStagesAfterUnstable()
+    }
     stages { 
         stage ('Initialize') {
             steps {
