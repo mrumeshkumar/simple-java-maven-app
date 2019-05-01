@@ -41,8 +41,15 @@ pipeline {
                 always {
                     archiveArtifacts artifacts: '**/*.jar', fingerprint: true
                     junit 'target/surefire-reports/*.xml'
-        }
+                       }
             }
         }
     }
+    post {
+    failure {
+        mail to: 'mrumeshkumar@hotmail.com',
+             subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
+             body: "Something is wrong with ${env.BUILD_URL}"
+    }
+}
 }
