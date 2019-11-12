@@ -1,4 +1,4 @@
-package test.cucumber;
+package com.mycompany.app;
 
 import cucumber.api.*;
 import cucumber.api.junit.Cucumber;
@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 
 @CucumberOptions(format = { "html:target/cucumber-html-report", "json:target/cucumber-json-report.json" }
-, features = "src/test/java/resources/test/cucumber/calc/Calc.Feature")
+, features = "src/test/resources")
 public class RunCalculatorTest {
 
 }
