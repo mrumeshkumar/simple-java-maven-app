@@ -10,10 +10,10 @@ import org.junit.runner.RunWith;
  * 
  * @author arun.pandey
  */
-@RunWith(Cucumber.class)
+//@RunWith(Cucumber.class)
 
-@CucumberOptions(format = { "html:target/cucumber-html-report", "json:target/cucumber-json-report.json" }
-, features = "src/test/resources")
+//@CucumberOptions(format = { "html:target/cucumber-html-report", "json:target/cucumber-json-report.json" }
+//, features = "src/test/resources")
 public class RunCalculatorTest {
 
 }
