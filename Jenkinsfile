@@ -22,11 +22,9 @@ pipeline {
             }
         }
         stage('Deploy for production') {
-            
             steps {
+                input message: 'Are You ready for Production Deployment ? (Click "Proceed" to continue)'
                 bat """.\\jenkins\\scripts\\deliver.sh"""
-                input message: 'Finished using the web site? (Click "Proceed" to continue)'
-                sh './jenkins/scripts/kill.sh'
             }
         }
     }
