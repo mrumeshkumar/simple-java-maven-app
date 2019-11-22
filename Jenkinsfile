@@ -24,7 +24,7 @@ pipeline {
         stage('Deploy for production') {
             steps {
                 input message: 'Are You ready for Production Deployment ? (Click "Proceed" to continue)'
-                bat """.\\jenkins\\scripts\\deliver.sh"""
+                bat """.\\jenkins\\scripts\\production.sh"""
             }
         }
     }
